@@ -5,7 +5,7 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
-from structify.exceptions import ClipboardError
+from structfast.exceptions import ClipboardError
 
 MARKDOWN_FENCE = "```"
 TREE_PREFIX_RE = re.compile(r"^(?:[|│ ]{0,4}(?:[|│][ ]{3}|[ ]{4})|(?:[|│]?\s*))*(?:[├└+\\]?[─-]{2,}\s*)")

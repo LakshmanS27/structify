@@ -1,17 +1,17 @@
 """Custom exceptions used across the package."""
 
 
-class StructifyError(Exception):
-    """Base exception for all structify errors."""
+class StructfastError(Exception):
+    """Base exception for all structfast errors."""
 
 
-class ParseError(StructifyError):
+class ParseError(StructfastError):
     """Raised when structure input cannot be parsed safely."""
 
 
-class BuildError(StructifyError):
+class BuildError(StructfastError):
     """Raised when the filesystem builder cannot complete an action."""
 
 
-class ClipboardError(StructifyError):
+class ClipboardError(StructfastError):
     """Raised when clipboard access fails."""

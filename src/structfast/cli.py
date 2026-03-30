@@ -1,4 +1,4 @@
-"""Typer-powered command line interface for structify."""
+"""Typer-powered command line interface for structfast."""
 
 from __future__ import annotations
 
@@ -9,10 +9,10 @@ import typer
 from rich.console import Console
 from rich.table import Table
 
-from structify import __version__
-from structify.builder import build_structure, export_structure
-from structify.exceptions import BuildError, ClipboardError, ParseError, StructifyError
-from structify.utils import read_clipboard
+from structfast import __version__
+from structfast.builder import build_structure, export_structure
+from structfast.exceptions import BuildError, ClipboardError, ParseError, StructfastError
+from structfast.utils import read_clipboard
 
 app = typer.Typer(
     help="Build directories and files from text-based folder trees.",
@@ -42,7 +42,7 @@ def _render_actions(result_actions: list, *, verbose: bool) -> None:
         console.print(f"{label} {action.relative_path.as_posix()}{suffix}", markup=False)
 
 
-def _handle_error(exc: StructifyError) -> None:
+def _handle_error(exc: StructfastError) -> None:
     """Display a friendly error and exit."""
     console.print(f"[red]Error:[/red] {exc}")
     raise typer.Exit(code=1)
@@ -59,7 +59,7 @@ def main(
 ) -> None:
     """Entry point callback for global options."""
     if version:
-        console.print(f"structify {__version__}")
+        console.print(f"structfast {__version__}")
         raise typer.Exit()
 
 

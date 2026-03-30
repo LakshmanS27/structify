@@ -2,8 +2,8 @@ from pathlib import Path
 
 import pytest
 
-from structify.exceptions import ParseError
-from structify.parser import parse_structure
+from structfast.exceptions import ParseError
+from structfast.parser import parse_structure
 
 
 def test_parse_unicode_tree() -> None:

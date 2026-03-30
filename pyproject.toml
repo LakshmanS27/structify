@@ -3,20 +3,20 @@ requires = ["setuptools>=69", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "structify"
+name = "structfast"
 version = "0.1.0"
 description = "Turn text-based folder trees into real directories and files."
 readme = "README.md"
-license = { file = "LICENSE" }
+license = "MIT"
+license-files = ["LICENSE"]
 requires-python = ">=3.10"
 authors = [
-  { name = "OpenAI Codex" }
+  { name = "LakshmanS27" }
 ]
 keywords = ["cli", "filesystem", "scaffolding", "tree", "automation"]
 classifiers = [
   "Development Status :: 4 - Beta",
   "Intended Audience :: Developers",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
   "Programming Language :: Python :: 3",
   "Programming Language :: Python :: 3 :: Only",
@@ -43,12 +43,12 @@ dev = [
 ]
 
 [project.scripts]
-structify = "structify.cli:app"
+structfast = "structfast.cli:app"
 
 [project.urls]
-Homepage = "https://github.com/example/structify"
-Repository = "https://github.com/example/structify"
-Issues = "https://github.com/example/structify/issues"
+Homepage = "https://github.com/LakshmanS27/structfast"
+Repository = "https://github.com/LakshmanS27/structfast"
+Issues = "https://github.com/LakshmanS27/structfast/issues"
 
 [tool.setuptools]
 package-dir = { "" = "src" }

@@ -4,9 +4,9 @@ from __future__ import annotations
 
 from dataclasses import dataclass
 
-from structify.exceptions import ParseError
-from structify.models import Node
-from structify.utils import (
+from structfast.exceptions import ParseError
+from structfast.models import Node
+from structfast.utils import (
     clean_node_name,
     detect_tree_depth,
     infer_type,

@@ -2,7 +2,7 @@ from pathlib import Path
 
 from typer.testing import CliRunner
 
-from structify import cli
+from structfast import cli
 
 runner = CliRunner()
 

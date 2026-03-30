@@ -1,6 +1,6 @@
-# structify
+# structfast
 
-`structify` is a production-ready Python package and CLI that turns text-based folder trees into real directories and files.
+`structfast` is a production-ready Python package and CLI that turns text-based folder trees into real directories and files.
 
 It is designed for trees copied from:
 
@@ -25,19 +25,19 @@ It is designed for trees copied from:
 Install with `pip`:
 
 ```bash
-pip install structify
+pip install structfast
 ```
 
 Install with `uv`:
 
 ```bash
-uv tool install structify
+uv tool install structfast
 ```
 
 Run without installing globally:
 
 ```bash
-uvx structify build structure.txt
+uvx structfast build structure.txt
 ```
 
 ## Quick Start
@@ -58,42 +58,42 @@ a2a-system/
 Build it in the current directory:
 
 ```bash
-structify build structure.txt
+structfast build structure.txt
 ```
 
 With `uv`:
 
 ```bash
-uvx structify build structure.txt
+uvx structfast build structure.txt
 ```
 
 Preview without writing:
 
 ```bash
-structify build structure.txt --dry-run
+structfast build structure.txt --dry-run
 ```
 
 Build into a specific root:
 
 ```bash
-structify build structure.txt --root ./sandbox
+structfast build structure.txt --root ./sandbox
 ```
 
 Paste directly from the clipboard:
 
 ```bash
-structify paste --dry-run --smart
+structfast paste --dry-run --smart
 ```
 
 Export an existing directory:
 
 ```bash
-structify export .
+structfast export .
 ```
 
 ## CLI Reference
 
-### `structify build <source>`
+### `structfast build <source>`
 
 Options:
 
@@ -113,18 +113,18 @@ Example output:
 [FILE] a2a-system/requirements.txt
 ```
 
-### `structify paste`
+### `structfast paste`
 
 Reads clipboard content using `pyperclip`, parses it, and builds the structure with the same flags as `build`.
 
-### `structify export <path>`
+### `structfast export <path>`
 
 Generates a tree view from an existing directory. By default it prints to stdout; use `--output structure.txt` to write it to a file.
 
 ## Python API
 
 ```python
-from structify import build_structure, export_structure, parse_structure
+from structfast import build_structure, export_structure, parse_structure
 
 result = build_structure("structure.txt", root=".", dry_run=True, smart=True)
 for action in result.actions:
@@ -189,7 +189,7 @@ uv run pytest
 Run the CLI in development with `uv`:
 
 ```bash
-uv run structify build structure.txt --dry-run
+uv run structfast build structure.txt --dry-run
 ```
 
 Build distributions with either tool:

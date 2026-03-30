@@ -2,9 +2,9 @@ from pathlib import Path
 
 import pytest
 
-from structify.builder import build_nodes, build_structure, export_structure
-from structify.exceptions import BuildError
-from structify.models import Node
+from structfast.builder import build_nodes, build_structure, export_structure
+from structfast.exceptions import BuildError
+from structfast.models import Node
 
 
 def test_build_nodes_creates_nested_files(tmp_path: Path) -> None:

@@ -4,10 +4,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from structify.exceptions import BuildError
-from structify.models import BuildAction, BuildResult, Node
-from structify.parser import parse_structure
-from structify.utils import format_tree, load_text
+from structfast.exceptions import BuildError
+from structfast.models import BuildAction, BuildResult, Node
+from structfast.parser import parse_structure
+from structfast.utils import format_tree, load_text
 
 
 def build_nodes(
